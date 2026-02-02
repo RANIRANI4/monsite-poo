@@ -1,0 +1,15 @@
+{
+    "name": "rani/monsite-poo",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "RANIRANI4",
+            "email": "rani.kabbouri4@gmail.com"
+        }
+    ],
+    "require": {}
+}
