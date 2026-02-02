@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+<h2>
+    voici h2
+</h2>
 <h1>
     rr
 </h1>
