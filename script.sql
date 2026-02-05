@@ -24,7 +24,6 @@ VALUES ('M2i', 'm2i@gmail.com', '$2y$10$2CTv2LcrLK42K5eKezQDDu0bwhufFYVPCMwsPa/c
 
 
 
-DROP TABLE contact;
 
 CREATE TABLE contact
 (
