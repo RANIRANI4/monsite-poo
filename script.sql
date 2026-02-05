@@ -24,13 +24,21 @@ VALUES ('M2i', 'm2i@gmail.com', '$2y$10$2CTv2LcrLK42K5eKezQDDu0bwhufFYVPCMwsPa/c
 
 
 
-
 CREATE TABLE contact
 (
     id      INT PRIMARY KEY AUTO_INCREMENT,
     email   VARCHAR(255) NOT NULL,
     subject VARCHAR(255) NOT NULL,
     message TEXT         NOT NULL
+);
+
+
+CREATE TABLE product
+(
+    id          INT PRIMARY KEY AUTO_INCREMENT,
+    title       VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    price       FLOAT        NOT NULL
 );
 
 
