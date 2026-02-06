@@ -11,6 +11,31 @@ class Contact
     private string $subject;
 
     private string $message;
+    private string $created_at;
+    private string $updated_at;
+
+    public function getCreatedAt(): string
+    {
+        return $this->created_at;
+    }
+
+    public function setCreatedAt(string $created_at): Contact
+    {
+        $this->created_at = $created_at;
+        return $this;
+    }
+
+    public function getUpdatedAt(): string
+    {
+        return $this->updated_at;
+    }
+
+    public function setUpdatedAt(string $updated_at): Contact
+    {
+        $this->updated_at = $updated_at;
+        return $this;
+    }
+
 
     public function getId(): ?int
     {

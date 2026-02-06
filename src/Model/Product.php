@@ -4,9 +4,36 @@ namespace App\Model;
 
 class Product {
     private ?int $id =null;
+    private ?string $picture =null;
     private string $title;
     private string $description;
     private float $price;
+    private string $created_at;
+    private string $slug;
+
+    public function getCreatedAt(): string
+    {
+        return $this->created_at;
+    }
+
+    public function setCreatedAt(string $created_at): Product
+    {
+        $this->created_at = $created_at;
+        return $this;
+    }
+
+    public function getUpdatedAt(): string
+    {
+        return $this->updated_at;
+    }
+
+    public function setUpdatedAt(string $updated_at): Product
+    {
+        $this->updated_at = $updated_at;
+        return $this;
+    }
+    private string $updated_at;
+
 
     public function getId(): ?int
     {
@@ -51,5 +78,29 @@ class Product {
         $this->price = $price;
         return $this;
     }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): Product
+    {
+        $this->picture = $picture;
+        return $this;
+    }
+
+    public function getSlug(): string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): Product
+    {
+        $this->slug = $slug;
+        return $this;
+    }
+
+
 
 }

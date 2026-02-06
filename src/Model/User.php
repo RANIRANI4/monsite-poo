@@ -3,16 +3,26 @@
 namespace App\Model;
 
 
+use DateTime;
+
 class User
 {
-    private $id;
+    private ?int $id = null;
     private string $email;
     private string $username;
     private string $password;
+    private string $created_at;
+    private string $updated_at;
 
-    public function setEmail($email): void
+    public function getId(): ?int
     {
-        $this->email = $email;
+        return $this->id;
+    }
+
+    public function setId(?int $id): User
+    {
+        $this->id = $id;
+        return $this;
     }
 
     public function getEmail(): string
@@ -20,53 +30,53 @@ class User
         return $this->email;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getUsername()
+    public function setEmail(string $email): User
+    {
+        $this->email = $email;
+        return $this;
+    }
+
+    public function getUsername(): string
     {
         return $this->username;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getPassword()
+    public function setUsername(string $username): User
+    {
+        $this->username = $username;
+        return $this;
+    }
+
+    public function getPassword(): string
     {
         return $this->password;
     }
 
-    /**
-     * @param mixed $username
-     */
-    public function setUsername($username): void
-    {
-        $this->username = $username;
-    }
-
-    /**
-     * @param mixed $password
-     */
-    public function setPassword($password): void
+    public function setPassword(string $password): User
     {
         $this->password = $password;
+        return $this;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getCreatedAt(): DateTime
     {
-        return $this->id;
+        return new DateTime($this->created_at);
     }
 
-    /**
-     * @param mixed $id
-     */
-    public function setId($id): void
+    public function setCreatedAt(string $created_at): User
     {
-        $this->id = $id;
+        $this->created_at = $created_at;
+        return $this;
     }
 
+    public function getUpdatedAt(): DateTime
+    {
+        return new DateTime($this->updated_at);
+    }
 
+    public function setUpdatedAt(string $updated_at): User
+    {
+        $this->updated_at = $updated_at;
+        return $this;
+    }
 }
